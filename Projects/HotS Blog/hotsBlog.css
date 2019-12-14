@@ -1,0 +1,26 @@
+body {
+	background-image: url("https://lh3.googleusercontent.com/hvMOJIq2-tVmvnR5CnkhPwxxX5BgEWIN3lIiMUVaFs-TAYJ1TCibxXcZDMM0x0rx3dpa=w300"), url("https://i.imgur.com/OcFygJu.jpg");
+	background-position: 630px 25px, center;
+	background-repeat: no-repeat, no-repeat;
+	background-size: 75px 75px, 100% 100%;
+	font-family: sans-serif;
+}
+
+#front>h1 {
+	font-family: lobster;
+	color: white;
+	text-align: center;
+}
+
+#front>.container>.well>p {
+	font-family: oswald;
+	text-align: center;
+}
+
+.text {
+	margin-left: 300px;
+}
+
+.container>.well>hr {
+	border-top: 1px solid #a5a5a5;
+}

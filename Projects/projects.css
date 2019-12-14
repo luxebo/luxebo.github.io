@@ -1,0 +1,24 @@
+body {
+	padding-top: 70px;
+	background: radial-gradient(lightcyan, skyblue, navy);
+}
+
+.jumbotron {
+	background-image: url("../Background Images/Clothing");
+	background-position: right bottom;
+	background-size: 1200px 650px;
+	background-repeat: no-repeat;
+}
+
+.well {
+	width: 65%;
+}
+
+.caption {
+	text-align: center;
+}
+
+.separate {
+	width: 100%;
+	text-align: center;
+}
