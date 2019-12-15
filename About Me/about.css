@@ -4,6 +4,7 @@ body {
 	background-repeat: no-repeat, no-repeat;
 	background-attachment: fixed, fixed;
 	background-position: right, bottom right;
+	background-color: lightgray;
 }
 
 #text {

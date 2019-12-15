@@ -2,4 +2,8 @@ body {
 	padding-top: 70px;
 	background-image: url("../luxebo.github.io/Background Images/The Man.JPG");
 	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-color: lightgray;
+	padding-top: 50%;
 }
