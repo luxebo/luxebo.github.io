@@ -21,7 +21,9 @@ body {
 
 .rounded {
 	float: left;
-	width: 320px;
-	height: 320px;
+	width: auto;/*320px;*/
+	height: auto;/*320px;*/
 	margin-right: 10px;
+	max-height: 100%;
+	max-width: 100%
 }
