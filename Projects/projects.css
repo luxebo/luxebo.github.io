@@ -17,13 +17,15 @@ body {
 .separate {
 	width: 100%;
 	text-align: center;
+	margin-right: 10px;
 }
 
 .rounded {
 	float: left;
-	width: 300px;
-	height: 300px;
-	margin-right: 10px;
 	max-height: 100%;
 	max-width: 100%
+}
+
+.cap {
+	margin-left: 310px;
 }
