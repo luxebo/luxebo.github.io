@@ -1,6 +1,6 @@
 body 
 {
-	background-image: url("/luxebo.github.io/Background Images/Oranges.JPG");
+	background-image: url("./Background Images/Oranges.JPG");
 	height: 100%;
 	background-size: cover;
 	background-position: center;
