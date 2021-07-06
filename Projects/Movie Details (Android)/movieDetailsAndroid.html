@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Movie Scraper</title>
+	<title>Movie Details: Android</title>
 	<link href="https://fonts.googleapis.com/css?family=Lobster|Oswald|Open+Sans:wght@300" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="movieDetailsAndroid.css">
@@ -13,85 +13,93 @@
 		<br>
 		<br>
 	    <div class="well well-sm">
-	    	<h1>Movie Scraper</h1>
-	    	<p>This website is designed for users to be able to search for movies through The Movie Database, finding details, cast, and reviews of a particular movie or TV show. The website design required use of a frontend and backend ecosystem to create a proper proxy server to pull JSON from the database. Python and flask were used to create that proxy server to split load pressure from directly calling TMDB APIs in the frontend, making it easier for the frontend to display the webpage under a heavier load. The frontend is not responsive, as the focus of the website is to emphasize good practice for backend.</p>
+	    	<h1>Movie Details: Android</h1>
+	    	<p>This application is designed for users to be able to view a movie's details through The Movie Database, showcasing details, cast, reviews, and more backend data of a particular movie or TV show through Android devices. The application design maintained a frontend and backend despite the fact that it isn't a website: the same principles of load balancing and shooting the HTTP requests from the backend is cleaner and better practice. The choice of using standard Java and Android Studio is simply because Java is better documented than recent languages. The application is built on Fragments, separating parts of the application into clean modules. The backend has dynamic content served through the HTTP requests reaching TMDB's APIs and pulling JSON through the Nodejs and Express proxy server for the application.</p>
 		</div>
 		<br>
 		<br>
 	    <div class="well well-sm">
-	    	<img src="./HomePage.PNG" class="thumbnail rounded-left img-responsive">
+	    	<img src="./HomeFragment.PNG" class="thumbnail rounded-left img-responsive android-specific">
 	    	<div class="left">
 	    	<h3>Home Page</h3>
 	    	<br>
 	    	<br>
-	    	The Home page has two tabs, allowing for the user to swap between the tabs of searching and home. The Home page also has two slideshows, showing the recently trending movies and recently aired TV shows, gathering the data directly from the TMDB API to create the slideshows and showcase the movie and TV shows. This page is purely for demonstration of a working backend pulling from the database.
+	    	The home page holds a carousel of the top five movies, allowing for easy access to recent movies and TV shows. Angular and Bootstrap 4 makes the creation of the carousel easy by providing a framework that allows me to create a smooth and intuitive user interface. Each movie in the carousel is clickable, allowing for smooth transitions to the details of the movie shown.
 	    	</div>
 		</div>
 		<br>
 		<br>
 	    <div class="well well-sm">
-	    	<img src="./searchPage.PNG" class="thumbnail rounded-right img-responsive">
+	    	<img src="./HomeFragmentDetails.PNG" class="thumbnail rounded-right img-responsive android-specific">
 	    	<div class="right">
-	    	<h3>Search Page</h3>
+	    	<h3>Carousels</h3>
 	    	<br>
 	    	<br>
-	    	The Search page has a simple UI, keeping the same home and search tabs to allow switching between the pages. The search feature allows for any keyword to scrape the TMDB API and shoot a dedicated HTTP request to the database, gathering a JSON request through the Python and Flask backend, and push the data to the page. The clear button and category button create a further division in search terms and utility.
+	    	The Carousels are created with Angular and Bootstrap as well, which expand the selection of movies and TV shows shown from the dynamic content. There are a total of six sets of carousels that showcase many different statistically pulled TV shows and movies. Each movie and TV show card is clickable in order to access the details of that particular movie or TV show.
 	    	</div>
 		</div>
 		<br>
 		<br>
 	    <div class="well well-sm">
-	    	<img src="./searchResults.PNG" class="thumbnail rounded-left img-responsive">
+	    	<img src="./DetailsFragment.PNG" class="thumbnail rounded-left img-responsive android-specific">
 	    	<div class="left">
-	    	<h3>Search Results</h3>
+	    	<h3>Details Page</h3>
 	    	<br>
 	    	<br>
-	    	Upon shooting an HTTP Request to the TMDB API, the proxy server pulls the JSON to the frontend and shows the search results in a list. This proxy server and backend is used instead of pulling the JSON directly from the frontend in order to enact load balancing, make the code modular and separate based on function, and practice different mechanics in web technology. The power of being able to write the backend code in any language (that is fit for backend) rather than being stuck with the typical frontend frameworks and languages is extremely useful.
+	    	Upon clicking a movie or TV show shown, an HTTP Request is sent to the TMDB API, the proxy server pulls the JSON to the frontend and shows the details in this page. This proxy server and backend is used instead of pulling the JSON directly from the frontend in order to enact load balancing, make the code modular and separate based on function, and practice different mechanics in web technology. 
 	    	<br>
 	    	<br>
-	    	The results either pull from the movie category, the TV show category, or both movies and TV shows combined. These results show basic information of each media found, like titles, release dates and air dates, votes and average ratings, genres, description, and poster image. Each movie and TV show dynamically generates a button as well, which can be opened for movie and TV show details, including cast and review data.
+	    	The details contain a multitude of features, including the title, description, tagline, rating, duration, release or air date, genres, spoken languages, a trailer which is propagated through a Youtube player feature downloaded from Nodejs' different packages, share features forming a link to facebook or twitter sharing the movie or TV show, and a watchlist feature allowing for adding wanted movies and TV shows to the watchlist.
 	    	</div>
 		</div>
 		<br>
 		<br>
 	    <div class="well well-sm">
-	    	<img src="./searchDetails.PNG" class="thumbnail rounded-right img-responsive">
+	    	<img src="./DetailsFragmentExtended.PNG" class="thumbnail rounded-right img-responsive android-specific">
 	    	<div class="right">
-	    	<h3>Search Details</h3>
+	    	<h3>Detailed Cast</h3>
 	    	<br>
 	    	<br>
-	    	Clicking the dynamically generated button creates a modal box with the data in a better setting. The backdrop image, title, link to TMDB's movie details, average rating, vote count, date of release or first air date, genres, description, and spoken languages are shown within the details. This allows for the user that is interested in the particular movie or TV show to view the details of the movie or TV show in further detail after searching for the particular movie or TV show.
+	    	The cast is also pulled up from the particular movie. Each cast member is shown within a card system dynamically created by Angular and Bootstrap, allowing for dynamic content within the cast section. The cast each have an activation allowing for a modal box to be pulled up and showing details of the cast member, including links to popular social media of the cast member.
 	    	<br>
 	    	<br>
-	    	This section is mostly focused on frontend development and creating a better user interface for the user, as the proxy server's functionality is already done with the search features and the slideshows in the home page. Everything further is just added fluff and details showing the inner workings of the movie or TV show pulled from the proxy server.
+	    	This section is mostly focused on frontend development and creating a better user interface for the user, as the proxy server's functionality is already done with the detail page pulling and the carousels in the home page. Everything further is just added fluff and details showing the inner workings of the movie or TV show pulled from the proxy server.
 	    	</div>
 		</div>
 		<br>
 		<br>
 	    <div class="well well-sm">
-	    	<img src="./searchCast.PNG" class="thumbnail rounded-left img-responsive">
+	    	<img src="./ReviewsExtended.PNG" class="thumbnail rounded-left img-responsive android-specific">
 	    	<div class="left">
-	    	<h3>Search Cast</h3>
+	    	<h3>Detailed Reviews</h3>
 	    	<br>
 	    	<br>
-	    	Besides standard movie and TV show details, the user can access the cast of the particular movie or TV show. This lists the individual cast in a card based format, pulled at the same time as the search details. This is all within the modal box, laid out using a grid for each card without using Bootstrap or a similar framework.
-	    	<br>
-	    	<br>
-	    	The cast are laid out with each cast member's name, played character, and picture. The purpose of doing so is to continue working on fundamentals in HTML, CSS, and JS, focused on grids and modals, while exemplifying the knowledge of populating data through the JSON requests pulled from the original search by being able to push multiple HTTP requests in an asynchronous fashion.
+	    	The user can also see the recent reviews of the search results. The section focuses on creating containers for the reviews. The reviews each contain their individual authors, date of writing, description up to a certain length, and overall rating given by the author.
 	    	</div>
 		</div>
 		<br>
 		<br>
 	    <div class="well well-sm">
-	    	<img src="./searchReviews.PNG" class="thumbnail rounded-right img-responsive">
+	    	<img src="./SearchFragment.PNG" class="thumbnail rounded-right img-responsive android-specific">
 	    	<div class="right">
-	    	<h3>Search Reviews</h3>
+	    	<h3>Detailed Recommendations</h3>
 	    	<br>
 	    	<br>
-	    	The user can also see the recent reviews of the search results. The section focuses on simple knowledge of HTML and CSS again with the dynamically generated reviews through the number of reviews hosted on TMDB for the particular movie or TV show. The reviews each contain their individual authors, date of writing, description up to a certain length, and overall rating given by the author.
+	    	The user can also see the recommendations of the particular movie or TV show, showing similar movies and TV shows to the currently viewed movie or TV show in the details page. These carousels and data are all repeated concepts from the home page carousels and the data is all from TMDB API. Nothing is truly new in this section, as everything has been done before in previous sections of this website.
+	    	</div>
+		</div>		
+		<br>
+		<br>
+	    <div class="well well-sm">
+	    	<img src="./WatchlistFragment.PNG" class="thumbnail rounded-left img-responsive android-specific">
+	    	<div class="left">
+	    	<h3>Search</h3>
 	    	<br>
 	    	<br>
-	    	Again, the section focuses on important elements in HTML, CSS, and JS, including modal box usage and knowing how to separate dynamically generated elements. Another important task is being able to populate data properly when the specified movie or TV show has no reviews: the reviews section is properly empty and null when this happens.
+	    	The user can search for movies and TV shows at once using a search feature. The search feature dynamically creates links to different details pages, which are set to different routes from the home page.
+	    	<br>
+	    	<br>
+	    	Angular and Bootstrap make this search feature significantly cleaner to build, as the frameworks host easy to use search bars with documentation that demonstrate how to use the search features. These frontend frameworks make building a search tool very easy compared to building it with raw HTML, CSS, and JS. A particular constraint for the search feature is the lack of good performance in search, since searching needs to be dynamic and constant, generating details page links quickly to each movie and TV show details. The big benefit of using Angular here is that the performance is quicker, since Angular and Bootstrap allow for better performing searches through their own search bars.
 	    	</div>
 		</div>
 		<br>
@@ -102,18 +110,18 @@
 	    	<h3>The Proxy Server and JSON</h3>
 	    	<br>
 	    	<br>
-	    	The proxy server is created using Python and Flask. A key part of why the backend was created is not only for load balancing, but also for the fact that interacting with the TMDB API is much easier using Python as a backend language, rather than pulling the data from the frontend directly. Above is an example of a JSON request that is found directly from the proxy server, pulling the first five results back from the slideshow in the home page.
+	    	The proxy server is created using Nodejs and Express. A key part of why the backend was created is not only for load balancing, but also for the fact that the code is cleaner with Nodejs as a separation in the HTTP requests. For example, I can reuse this backend for another project (which happened to be mostly reused for the Android project), as the backend is separated from the frontend. Above is an example of a JSON request that is found directly from the proxy server, pulling multiple search results for both movies and TV shows based on a search for the keyword of "Avengers".
 	    	</div>
 		</div>
 		<br>
 		<br>
 	    <div class="well well-sm">
-	    	<img src="./azure.PNG" class="thumbnail rounded-right img-responsive">
+	    	<img src="./GCP.PNG" class="thumbnail rounded-right img-responsive">
 	    	<div class="right">
-	    	<h3>Hosting on Azure</h3>
+	    	<h3>Hosting on GCP</h3>
 	    	<br>
 	    	<br>
-	    	The backend and frontend are completely hosted on Azure, allowing for dynamically generated content at will as long the service is still working via Azure. Microsoft Azure allows me to adjust issues and fix bugs cleanly and easily, while keeping hosting on the cloud much simpler than if I were to go and host the web service directly using my own servers. I also have the power to start and stop the virtual machine at will, allowing me to display the content when I want to, conserving cost for hosting the service on the cloud.
+	    	The backend and frontend are completely hosted on the Google Cloud Platform, allowing for dynamically generated content at will as long the service is still working via Google Cloud Platform. Google Cloud Platform allows me to adjust issues and fix bugs cleanly and easily, while keeping hosting on the cloud much simpler than if I were to go and host the web service directly using my own servers. I also have the power to start and stop the virtual machine at will, allowing me to display the content when I want to, conserving cost for hosting the service on the cloud.
 	    	</div>
 		</div>
 	</div>
