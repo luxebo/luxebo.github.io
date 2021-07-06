@@ -21,10 +21,13 @@
 	    <div class="well well-sm">
 	    	<img src="./HomeFragment.PNG" class="thumbnail rounded-left img-responsive android-specific">
 	    	<div class="left">
-	    	<h3>Home Page</h3>
+	    	<h3>Home Fragment</h3>
 	    	<br>
 	    	<br>
-	    	The home page holds a carousel of the top five movies, allowing for easy access to recent movies and TV shows. Angular and Bootstrap 4 makes the creation of the carousel easy by providing a framework that allows me to create a smooth and intuitive user interface. Each movie in the carousel is clickable, allowing for smooth transitions to the details of the movie shown.
+	    	The home fragment holds a carousel of the top six movies or TV shows, allowing for easy access to recent movies and TV shows. A switch above allows for easy change between movie or TV show focus. Each movie in the carousel is touchable, allowing for smooth transitions to the details of the movie shown. 
+	    	<br>
+	    	<br>
+	    	All of the data seen here is pulled from the backend, which is a separate proxy server written in Nodejs and Express. The frontend receives the JSON responses from the backend server, which in turn receives responses for the HTTP requests sent by opening the server. The images are then populated and formatted using Glide, with the effects and carousel created from some Android xml features. The overall frontend details are all formed by different xml properties and Java.
 	    	</div>
 		</div>
 		<br>
@@ -32,10 +35,13 @@
 	    <div class="well well-sm">
 	    	<img src="./HomeFragmentDetails.PNG" class="thumbnail rounded-right img-responsive android-specific">
 	    	<div class="right">
-	    	<h3>Carousels</h3>
+	    	<h3>Home Fragment Continued</h3>
 	    	<br>
 	    	<br>
-	    	The Carousels are created with Angular and Bootstrap as well, which expand the selection of movies and TV shows shown from the dynamic content. There are a total of six sets of carousels that showcase many different statistically pulled TV shows and movies. Each movie and TV show card is clickable in order to access the details of that particular movie or TV show.
+	    	The home fragment contains a number of carousels that have multiple cards on each one. Each card contains a button that triggers a particular set of actions allowed by the user, including opening a link to the TMDB source, sharing the movie or TV show on facebook or twitter, or adding the movie or TV show to the watchlist through saving it on Android's local storage.
+	    	<br>
+	    	<br>
+	    	The bottom of the fragment contains a slider that allows the user to switch between the home, search, and watchlist Fragments. The Android application is built in Fragments to allow for modularization of both the frontend UI and the functionality created within Java. The footer is created with a link to the TMDB API, which the Android application sends HTTP requests to and receives JSON responses in the backend, which are then pulled in the frontend through Java.
 	    	</div>
 		</div>
 		<br>
@@ -43,13 +49,13 @@
 	    <div class="well well-sm">
 	    	<img src="./DetailsFragment.PNG" class="thumbnail rounded-left img-responsive android-specific">
 	    	<div class="left">
-	    	<h3>Details Page</h3>
+	    	<h3>Details Fragment</h3>
 	    	<br>
 	    	<br>
-	    	Upon clicking a movie or TV show shown, an HTTP Request is sent to the TMDB API, the proxy server pulls the JSON to the frontend and shows the details in this page. This proxy server and backend is used instead of pulling the JSON directly from the frontend in order to enact load balancing, make the code modular and separate based on function, and practice different mechanics in web technology. 
+	    	Upon touching a movie or TV show shown, an HTTP Request is sent to the TMDB API, the proxy server pulls the JSON to the frontend and shows the details in this fragment. This proxy server and backend is used instead of pulling the JSON directly from the frontend in order to enact load balancing, make the code modular and separate based on function, and practice different mechanics in web technology. 
 	    	<br>
 	    	<br>
-	    	The details contain a multitude of features, including the title, description, tagline, rating, duration, release or air date, genres, spoken languages, a trailer which is propagated through a Youtube player feature downloaded from Nodejs' different packages, share features forming a link to facebook or twitter sharing the movie or TV show, and a watchlist feature allowing for adding wanted movies and TV shows to the watchlist.
+	    	The details contain a multitude of features, including the title, description,  rating, release or air date, genres, a trailer which is propagated through a Youtube player downloaded from Google's different Android packages, share features forming a link to facebook or twitter sharing the movie or TV show, and a watchlist feature allowing for adding wanted movies and TV shows to the watchlist.
 	    	</div>
 		</div>
 		<br>
@@ -57,13 +63,13 @@
 	    <div class="well well-sm">
 	    	<img src="./DetailsFragmentExtended.PNG" class="thumbnail rounded-right img-responsive android-specific">
 	    	<div class="right">
-	    	<h3>Detailed Cast</h3>
+	    	<h3>Details Fragment Continued</h3>
 	    	<br>
 	    	<br>
-	    	The cast is also pulled up from the particular movie. Each cast member is shown within a card system dynamically created by Angular and Bootstrap, allowing for dynamic content within the cast section. The cast each have an activation allowing for a modal box to be pulled up and showing details of the cast member, including links to popular social media of the cast member.
+	    	The cast, reviews, and recommendations are also pulled up from the particular movie. Each cast member is shown within a card system showing each individual image and cast member's name, using Glide to create the circular borders. The reviews are all pulled up to have ratings, authors, date written, and descriptions with only three lines, allowing expanding upon clicking to a Review Fragment. Lastly, the recommended picks all lead to another Details Fragment pop up of that movie or TV show.
 	    	<br>
 	    	<br>
-	    	This section is mostly focused on frontend development and creating a better user interface for the user, as the proxy server's functionality is already done with the detail page pulling and the carousels in the home page. Everything further is just added fluff and details showing the inner workings of the movie or TV show pulled from the proxy server.
+	    	This section is mostly focused on frontend development and creating a better user interface for the user, as the proxy server's functionality is already done with the detail fragment pulling and the carousels in the home fragment. Everything further is just added fluff and details showing the inner workings of the movie or TV show pulled from the proxy server.
 	    	</div>
 		</div>
 		<br>
@@ -71,10 +77,13 @@
 	    <div class="well well-sm">
 	    	<img src="./ReviewsExtended.PNG" class="thumbnail rounded-left img-responsive android-specific">
 	    	<div class="left">
-	    	<h3>Detailed Reviews</h3>
+	    	<h3>Reviews Fragment</h3>
 	    	<br>
 	    	<br>
 	    	The user can also see the recent reviews of the search results. The section focuses on creating containers for the reviews. The reviews each contain their individual authors, date of writing, description up to a certain length, and overall rating given by the author.
+	    	<br>
+	    	<br>
+	    	A key note of this feature is that the review is already pulled in the HTTP request during the details fragment creation. The review fragment is only pushed through the frontend as a feed-forward data addition. All of the data is already pulled from the backend, which then is pulled from the Details Fragment to fill in the gaps. Although the previous description is shortened, the entire description is kept for this Fragment. This showcases a need for Fragments, as data can be kept and transfered in the Android ecosystem through the Fragments.
 	    	</div>
 		</div>
 		<br>
@@ -82,10 +91,13 @@
 	    <div class="well well-sm">
 	    	<img src="./SearchFragment.PNG" class="thumbnail rounded-right img-responsive android-specific">
 	    	<div class="right">
-	    	<h3>Detailed Recommendations</h3>
+	    	<h3>Search Fragment</h3>
 	    	<br>
 	    	<br>
-	    	The user can also see the recommendations of the particular movie or TV show, showing similar movies and TV shows to the currently viewed movie or TV show in the details page. These carousels and data are all repeated concepts from the home page carousels and the data is all from TMDB API. Nothing is truly new in this section, as everything has been done before in previous sections of this website.
+	    	The user can search for movies and TV shows at once using a search feature. The search feature populates a number of preset xml defined prefabs. This allows for the frontend user interface to dedicate enough slots for the results shown, as there wouldn't be any gaps in the user interface.
+	    	<br>
+	    	<br>
+	    	The default Android xml and packages make this search feature easily built, as the default search works seamlessly with the documentation that demonstrates how to use the search API. The data is pulled responsively through the backend into the frontend, which then populates the data one by one in a quick fashion. Each movie or TV show pulled as data holds a Details Fragment activity request, which pushes a Details Fragment into the mix upon pushing any movie or TV show.
 	    	</div>
 		</div>		
 		<br>
@@ -93,13 +105,13 @@
 	    <div class="well well-sm">
 	    	<img src="./WatchlistFragment.PNG" class="thumbnail rounded-left img-responsive android-specific">
 	    	<div class="left">
-	    	<h3>Search</h3>
+	    	<h3>Watchlist Fragment</h3>
 	    	<br>
 	    	<br>
-	    	The user can search for movies and TV shows at once using a search feature. The search feature dynamically creates links to different details pages, which are set to different routes from the home page.
+	    	The user can add and remove movies and TV shows from a watchlist which uses Android's local storage system to keep track of a dictionary of movies and TV shows. This feature allows for users to keep track of what they previously searched for and wanted to watch, especially if the movie or TV show was niche and isn't shown on the Home Fragment.
 	    	<br>
 	    	<br>
-	    	Angular and Bootstrap make this search feature significantly cleaner to build, as the frameworks host easy to use search bars with documentation that demonstrate how to use the search features. These frontend frameworks make building a search tool very easy compared to building it with raw HTML, CSS, and JS. A particular constraint for the search feature is the lack of good performance in search, since searching needs to be dynamic and constant, generating details page links quickly to each movie and TV show details. The big benefit of using Angular here is that the performance is quicker, since Angular and Bootstrap allow for better performing searches through their own search bars.
+	    	The data is completely stored within the local storage, therefore this feature has no connection with the backend. This is entirely locally stored on the Android device, which completely negates the need for touching the backend again. However, upon touching a movie or TV show in the watchlist, the user triggers a call to the backend, making a necessary call to the TMDB API and forcing the Details Fragment to be pulled up with the details there.
 	    	</div>
 		</div>
 		<br>
