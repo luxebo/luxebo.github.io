@@ -30,3 +30,8 @@ body {
 .cap {
 	margin-left: 310px;
 }
+
+.android-specific {
+	width: 180px;
+	height: 180px;
+}
