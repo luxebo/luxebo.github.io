@@ -1,0 +1,38 @@
+body {
+	background-image: url("./camping_background.jpeg");
+	background-size: cover;
+}
+
+h1 {
+	text-align: center;
+}
+
+h3 {
+	text-align: center;
+}
+
+.rounded-left {
+	width: 300px;
+	float: left;
+	max-height: 100%;
+	max-width: 100%
+}
+
+.rounded-right {
+	width: 300px;
+	float: right;
+	max-height: 100%;
+	max-width: 100%
+}
+
+.left {
+	margin-left: 310px;
+}
+
+.right {
+	margin-right: 310px;
+}
+
+.centered {
+	text-align: center;
+}
