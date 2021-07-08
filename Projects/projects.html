@@ -133,7 +133,13 @@
     <div class="cap">
     <p>
     <h3>Object Reconstruction</h3>
-    This project is a computer vision project focused on a concept named Object Reconstruction. The project is written in Python and the final report is below.
+    This project is a computer vision project focused on a concept named Object Reconstruction. The project is written in Python, using the Jupyter notebook and Anaconda distribution to formulate the code, and using OpenCV packages, Numpy libraries, and MeshLab. The concept of Object Reconstruction is to take a bunch of photos of an object using scanners and projectors, generate a mesh of each image, which are images focused on each individual side of the object, generate a baseline mesh from triangulation after figuring out camera calibration to find camera parameters, and finalizing the mesh using MeshLab to adjust the mesh with Poisson Surface Reconstruction.
+    <br>
+    <br>
+    Some details include that camera calibration was through finding intrinsic and extrinsic parameters, reconstruction prioritizes creating a decode mask to filter improper pixels through XORing, and creating a point cloud with 3D points to create the shape of the mesh. Mesh clean up is done through Delaunay Triangulation, which is an algorithm that triangulates the exact mesh through the points from the point cloud. Poisson Surface Reconstruction and mesh alignment utilizes MeshLab, which is a tool that allows for easy clean up of the mesh and trying to push together the individual meshes into one model. After this step, the model is complete.
+    <br>
+    <br>
+    The project code can be released on request, but the report is below: feel free to look into the report for details of what exact algorithms are used and what process was taken to make the project happen.
     <br>
     <br>
     <a class="btn btn-primary" href="../Projects/Object Reconstruction/finalreport.pdf" role="button">Object Reconstruction</a>
@@ -146,7 +152,10 @@
     <div class="cap">
     <p>
     <h3>MDP Research</h3>
-    Imma do this tomorrow
+    This project is a research project on Markov Decision Processes, focused on using Metric Temporal Logic Constraints on a translated abstract MDP for Value Iteration tasks. This project follows the basic formula for research projects, starting with reading multiple research papers to find a problem and come up with a creative solution, to writing a paper while conducting experiments using Python, networkx, pymdptoolbox, and py-metric-temporal-logic to test the abstract MDP algorithm against toy problems used in these packages. The basic concept is to use these logic formulas in MTL to forcibly control the Value Iteration process and prevent situations such as reward hacking, in which the AI behind the scenes attempts to cheat the reward system. The MDP is generally too large however, requiring an abstract MDP to control the MDP's size and shrink the graph into something that can use the MTL formulas to scalably apply the formulas against the graph. That is the summary of the problem and solution: how can we solve Value Iteration in an accurate and efficient way, and the solution is to create an abstract MDP with MTL Constraints.
+    <br>
+    <br>
+    Unfortunately, I did not get to the point of submitting to a conference, but the final report is below if there is interest for the project concept. 
     <br>
     <br>
     <a class="btn btn-primary" href="../Projects/MDP Research/MDP Research.pdf" role="button">MDP Research</a>
