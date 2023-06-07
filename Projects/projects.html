@@ -37,10 +37,13 @@
     <div class="cap">
     <p>
     <h3>Silks</h3>
-    This is a metaverse startup that I currently work at. Silks is a metaverse company focusing on making horse racing and gambling more interactive in a way that users can purchase horse avatars that represent real thoroughbred horses.
+    This is a metaverse/NFT/crypto startup that I currently work at. Silks is a metaverse company focusing on making horse racing and gambling more interactive in a way that users can purchase horse avatars that represent real thoroughbred horses. The users can then gamble on real races through owning those horses, winning real money whenever the horse wins in a real race.
     <br>
     <br>
-    I build the Unity side of this product in which I work directly with an art team to provide proper integration of shaders, materials, lighting, modeling, and overall design into Unity. I work with webGL and essentially am building a 3rd person walking simulator that allows users to interact with their horses, look at a large interactive area full of horse racing history, purchase a farm to be able to share and gamble horses, and other features. I built the dialogue system, alongside many small features both in the frontend and backend of the simulation.
+    I build the Unity side of this product in which I work directly with an art team to provide proper integration of shaders, materials, lighting, modeling, and overall design into Unity. I work with webGL and essentially am building a 3rd person walking simulator that allows users to interact with their horses, look at a large interactive area full of horse racing history, purchase a farm to be able to share and gamble on horses, and other features. I built the dialogue system, added scene transitions and asset bundles to AWS S3, and optimized the project for WebGL.
+    <br>
+    <br>
+    I also ingested a large amount of horses (10000+) from the jockey club API, placing them into a SQL table and keeping metadata on S3. This data is then used to create NFTs and mint them from an admin portal, in which I created multiple lambda functions in AWS that trigger through whenever a race is detected, writing to a Simple Queue System to notify and add to SQL with a Simple Notification System topic. Upon an admin minting the horse as an NFT, the moralis smart contract will trigger, and the AWS lambda function will call each other and ingest the metadata into SQL and S3. In addition to this, I worked on a Three.js Land minting portal, in which I wrote an ASP.NET API to allow the React frontend to call the backend through axios calls and allow users to purchase land NFTs through opensea, saving gas fee costs by letting users mint the land themselves.
     <br>
     <br>
     I plan to continue to work here for the near future.
