@@ -35,3 +35,7 @@ body {
 	width: 180px;
 	height: 180px;
 }
+
+.category-of-project {
+	background: radial-gradient(white, #ca7d48 150%);
+}

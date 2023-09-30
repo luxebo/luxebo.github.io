@@ -32,21 +32,22 @@
     </div>
   </div>
 
+  <div class="well well-sm separate category-of-project">
+    <h1>Work Experience</h1>
+  </div>
+
   <div class="well well-sm separate">
     <img src="../Projects/Silks/silks.png" class="thumbnail rounded img-responsive">
     <div class="cap">
     <p>
-    <h3>Silks</h3>
-    This is a metaverse/NFT/crypto startup that I currently work at. Silks is a metaverse company focusing on making horse racing and gambling more interactive in a way that users can purchase horse avatars that represent real thoroughbred horses. The users can then gamble on real races through owning those horses, winning real money whenever the horse wins in a real race.
+    <h3>Game of Silks</h3>
+    This is a metaverse/NFT/crypto startup that I worked at. Silks is a metaverse company focusing on making horse racing and gambling more interactive in a way that users can purchase horse avatars that represent real thoroughbred horses. The users can then gamble on real races through owning those horses, winning real money whenever the horse wins in a real race.
     <br>
     <br>
-    I build the Unity side of this product in which I work directly with an art team to provide proper integration of shaders, materials, lighting, modeling, and overall design into Unity. I work with webGL and essentially am building a 3rd person walking simulator that allows users to interact with their horses, look at a large interactive area full of horse racing history, purchase a farm to be able to share and gamble on horses, and other features. I built the dialogue system, added scene transitions and asset bundles to AWS S3, and optimized the project for WebGL.
+    I built the Unity side of this product in which I work directly with an art team to provide proper integration of shaders, materials, lighting, modeling, and overall design into Unity. I work with webGL and essentially am building a 3rd person walking simulator that allows users to interact with their horses, look at a large interactive area full of horse racing history, purchase a farm to be able to share and gamble on horses, and other features. I built the dialogue system, added scene transitions and asset bundles to AWS S3, and optimized the project for WebGL.
     <br>
     <br>
-    I also ingested a large amount of horses (10000+) from the jockey club API, placing them into a SQL table and keeping metadata on S3. This data is then used to create NFTs and mint them from an admin portal, in which I created multiple lambda functions in AWS that trigger through whenever a race is detected, writing to a Simple Queue System to notify and add to SQL with a Simple Notification System topic. Upon an admin minting the horse as an NFT, the moralis smart contract will trigger, and the AWS lambda function will call each other and ingest the metadata into SQL and S3. In addition to this, I worked on a Three.js Land minting portal, in which I wrote an ASP.NET API to allow the React frontend to call the backend through axios calls and allow users to purchase land NFTs through opensea, saving gas fee costs by letting users mint the land themselves.
-    <br>
-    <br>
-    I plan to continue to work here for the near future.
+    I also ingested a large amount of horses (10000+) from the jockey club API, placing them into a SQL table and keeping metadata on S3. This data is then used to create NFTs and mint them from an admin portal, in which I created multiple lambda functions in AWS that trigger through whenever a race is detected, writing to a Simple Queue System to notify and add to SQL with a Simple Notification System topic. Upon an admin minting the horse as an NFT, the moralis smart contract will trigger, and the AWS lambda function will call each other and ingest the metadata into SQL and S3. In addition to this, I worked on a Three.js Land minting portal, in which I wrote an ASP.NET API to allow the React frontend to call the backend through axios calls and allow users to purchase land NFTs through a smart contract with moralis, saving gas fee costs by letting users mint the land themselves.
     <br>
     <br>
     <a class="btn btn-primary" href="https://www.silks.io" role="button">Silks</a>
@@ -99,13 +100,8 @@
     </div>
   </div>
 
-  <div class="well well-sm separate">
-    <div class="cap">
-    <p>
-    <h3>A Secret...</h3>
-    This project will be revealed soon... I am working on a long term project that I am excited about, but will hold on revealing details for now.
-    </p>
-    </div>
+  <div class="well well-sm separate category-of-project">
+    <h1>Game Development and Design</h1>
   </div>
 
   <div class="well well-sm separate">
@@ -146,6 +142,61 @@
     </div>
   </div>
 
+  <div class="well well-sm separate">
+    <img src="../Projects/SDG Design/SDG Design.PNG" class="thumbnail rounded img-responsive">
+    <div class="cap">
+    <p>
+    <h3>Social Deduction Game Design Page</h3>
+    This is a page filled with hundreds of pages of design on different pen and paper tabletop RPG games and social deduction games meant to be played on Discord. This isn't quite a technical project, but showcases all the creativity and significant gameplay mechanic designing that I have worked on in the past for game design related work. These games were playtested locally with some of my friends through Discord.
+    <br>
+    <br>
+    <a class="btn btn-primary" href="https://luxsdg.github.io/index.html" role="button">SDG Game Design</a>
+    </p>
+    </div>
+  </div>
+
+  <div class="well well-sm separate category-of-project">
+    <h1>Machine Learning and Research</h1>
+  </div>
+
+  <div class="well well-sm separate">
+    <img src="../Projects/Object Reconstruction/better1.JPG" class="thumbnail rounded img-responsive">
+    <div class="cap">
+    <p>
+    <h3>Object Reconstruction</h3>
+    This project is a computer vision project focused on a concept named Object Reconstruction. The project is written in Python, using the Jupyter notebook and Anaconda distribution to formulate the code, and using OpenCV packages, Numpy libraries, and MeshLab. The concept of Object Reconstruction is to take a bunch of photos of an object using scanners and projectors, generate a mesh of each image, which are images focused on each individual side of the object, generate a baseline mesh from triangulation after figuring out camera calibration to find camera parameters, and finalizing the mesh using MeshLab to adjust the mesh with Poisson Surface Reconstruction.
+    <br>
+    <br>
+    Some details include that camera calibration was through finding intrinsic and extrinsic parameters, reconstruction prioritizes creating a decode mask to filter improper pixels through XORing, and creating a point cloud with 3D points to create the shape of the mesh. Mesh clean up is done through Delaunay Triangulation, which is an algorithm that triangulates the exact mesh through the points from the point cloud. Poisson Surface Reconstruction and mesh alignment utilizes MeshLab, which is a tool that allows for easy clean up of the mesh and trying to push together the individual meshes into one model. After this step, the model is complete.
+    <br>
+    <br>
+    The project code can be released on request, but the report is below: feel free to look into the report for details of what exact algorithms are used and what process was taken to make the project happen.
+    <br>
+    <br>
+    <a class="btn btn-primary" href="../Projects/Object Reconstruction/finalreport.pdf" role="button">Object Reconstruction</a>
+    </p>
+    </div>
+  </div>
+
+  <div class="well well-sm separate">
+    <img src="../Projects/MDP Research/abstract MDP.PNG" class="thumbnail rounded img-responsive">
+    <div class="cap">
+    <p>
+    <h3>MDP Research</h3>
+    This project is a research project on Markov Decision Processes, focused on using Metric Temporal Logic Constraints on a translated abstract MDP for Value Iteration tasks. This project follows the basic formula for research projects, starting with reading multiple research papers to find a problem and come up with a creative solution, to writing a paper while conducting experiments using Python, networkx, pymdptoolbox, and py-metric-temporal-logic to test the abstract MDP algorithm against toy problems used in these packages. The basic concept is to use these logic formulas in MTL to forcibly control the Value Iteration process and prevent situations such as reward hacking, in which the AI behind the scenes attempts to cheat the reward system. The MDP is generally too large however, requiring an abstract MDP to control the MDP's size and shrink the graph into something that can use the MTL formulas to scalably apply the formulas against the graph. That is the summary of the problem and solution: how can we solve Value Iteration in an accurate and efficient way, and the solution is to create an abstract MDP with MTL Constraints.
+    <br>
+    <br>
+    Unfortunately, I did not get to the point of submitting to a conference, but the final report is below if there is interest for the project concept. 
+    <br>
+    <br>
+    <a class="btn btn-primary" href="../Projects/MDP Research/MDP Research.pdf" role="button">MDP Research</a>
+    </p>
+    </div>
+  </div>
+
+  <div class="well well-sm separate category-of-project">
+    <h1>Mobile and Web Development</h1>
+  </div>
 
   <div class="well well-sm separate">
     <img src="../Projects/Movie Details (Android)/HomeFragment.PNG" class="thumbnail rounded img-responsive android-specific">
@@ -204,40 +255,6 @@
     </div>
   </div>
 
-  <div class="well well-sm separate">
-    <img src="../Projects/Object Reconstruction/better1.JPG" class="thumbnail rounded img-responsive">
-    <div class="cap">
-    <p>
-    <h3>Object Reconstruction</h3>
-    This project is a computer vision project focused on a concept named Object Reconstruction. The project is written in Python, using the Jupyter notebook and Anaconda distribution to formulate the code, and using OpenCV packages, Numpy libraries, and MeshLab. The concept of Object Reconstruction is to take a bunch of photos of an object using scanners and projectors, generate a mesh of each image, which are images focused on each individual side of the object, generate a baseline mesh from triangulation after figuring out camera calibration to find camera parameters, and finalizing the mesh using MeshLab to adjust the mesh with Poisson Surface Reconstruction.
-    <br>
-    <br>
-    Some details include that camera calibration was through finding intrinsic and extrinsic parameters, reconstruction prioritizes creating a decode mask to filter improper pixels through XORing, and creating a point cloud with 3D points to create the shape of the mesh. Mesh clean up is done through Delaunay Triangulation, which is an algorithm that triangulates the exact mesh through the points from the point cloud. Poisson Surface Reconstruction and mesh alignment utilizes MeshLab, which is a tool that allows for easy clean up of the mesh and trying to push together the individual meshes into one model. After this step, the model is complete.
-    <br>
-    <br>
-    The project code can be released on request, but the report is below: feel free to look into the report for details of what exact algorithms are used and what process was taken to make the project happen.
-    <br>
-    <br>
-    <a class="btn btn-primary" href="../Projects/Object Reconstruction/finalreport.pdf" role="button">Object Reconstruction</a>
-    </p>
-    </div>
-  </div>
-
-  <div class="well well-sm separate">
-    <img src="../Projects/MDP Research/abstract MDP.PNG" class="thumbnail rounded img-responsive">
-    <div class="cap">
-    <p>
-    <h3>MDP Research</h3>
-    This project is a research project on Markov Decision Processes, focused on using Metric Temporal Logic Constraints on a translated abstract MDP for Value Iteration tasks. This project follows the basic formula for research projects, starting with reading multiple research papers to find a problem and come up with a creative solution, to writing a paper while conducting experiments using Python, networkx, pymdptoolbox, and py-metric-temporal-logic to test the abstract MDP algorithm against toy problems used in these packages. The basic concept is to use these logic formulas in MTL to forcibly control the Value Iteration process and prevent situations such as reward hacking, in which the AI behind the scenes attempts to cheat the reward system. The MDP is generally too large however, requiring an abstract MDP to control the MDP's size and shrink the graph into something that can use the MTL formulas to scalably apply the formulas against the graph. That is the summary of the problem and solution: how can we solve Value Iteration in an accurate and efficient way, and the solution is to create an abstract MDP with MTL Constraints.
-    <br>
-    <br>
-    Unfortunately, I did not get to the point of submitting to a conference, but the final report is below if there is interest for the project concept. 
-    <br>
-    <br>
-    <a class="btn btn-primary" href="../Projects/MDP Research/MDP Research.pdf" role="button">MDP Research</a>
-    </p>
-    </div>
-  </div>
 
   <div class="well well-sm separate">
     <img src="../Projects/Yelpcamp/HomePage.PNG" class="thumbnail rounded img-responsive">
@@ -321,6 +338,7 @@
     </p>
     </div>
   </div>
+
 </div>
 
 <script src="https://code.jquery.com/jquery-2.1.4.js"></script>
