@@ -39,3 +39,7 @@ body {
 .category-of-project {
 	background: radial-gradient(white, #ca7d48 150%);
 }
+
+.rsmg {
+	background: radial-gradient(black, orangered);
+}
