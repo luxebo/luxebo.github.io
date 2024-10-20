@@ -36,21 +36,38 @@
     <h1>Work Experience</h1>
   </div>
 
+
+  <div class="well well-sm separate">
+    <img src="../Projects/Stellar Dust/RSMG.png" class="rsmg thumbnail rounded img-responsive">
+    <div class="cap">
+    <p>
+    <h3>Stellar Dust</h3>
+    This is a VR RTS game built with the team at Robot Sea Monster Games, and the culmination of everything I've worked towards in computer science. To build an RTS after being born in the age of games like Command and Conquer, Dawn of War 1/2, Starcraft 1/2, Warcraft 3, ... this is a dream come true. My role in this project was to be the tech lead, working as effectively the architect owner and project manager (with the final say of what is prioritized by the CEO) for the majority of the year. I helped with every single facet of this project.
+    <br>
+    <br>
+    The general premise of the game is that it is a 1v1 competitive game between two players on Quest 2/3/Pros, micromanaging a set of bases and drones on a hologram-like map to conquer territory and eliminate the opponent. There are additional win conditions such as king of the hill or capturing resources in a similar way to games like Company of Heroes 2, holding the point for resources. The gameplay is very similar to games like Mushroom Wars, but on VR.
+    <br>
+    <br>
+    
+    <br>
+    <br>
+    <a class="btn btn-primary" href="https://robotseamonster.com" role="button">Robot Sea Monster Games</a>
+    </p>
+    </div>
+  </div>
+
   <div class="well well-sm separate">
     <img src="../Projects/Robot Sea Monster Games/RSMG.png" class="rsmg thumbnail rounded img-responsive">
     <div class="cap">
     <p>
     <h3>Robot Sea Monster Games</h3>
-    This is an indie game studio that I work at building projects for different clients, as well as in-house projects. Key responsibilities that I hold as a Tech Lead are to work on development, management, and even client facing work. In particular, I am responsible for creating an underlying architecture for the project involved, writing up bite-sized tasks that are accomplishable within a small allocated budget, estimating time per task to make the project risk-free, making sure KPIs are met properly and user stories are focused in some priority to reach the target product goals, overseeing multiple junior developers in their ability to finish tasks on time and in good code quality, code reviewing and technical writing to keep up with the architecture changes, and communicating with the client to prevent any issues in development. 
+    This is an indie game studio that I work at building projects for different clients, as well as in-house projects. Key responsibilities that I hold as a Tech Lead are to work on development, management, and even client facing work. In particular, I am responsible for creating an underlying architecture for the project involved, writing up bite-sized tasks that are accomplishable within a small allocated budget, estimating time per task to make the project risk-free, making sure KPIs are met properly and user stories are focused in some priority to reach the target product goals, overseeing multiple junior developers in their ability to finish tasks on time and in good code quality, code reviewing and technical writing to keep up with the architecture changes, and communicating with the client to prevent any issues in development.     Notable client projects that I have worked on include a social media application, an LLM Escape Room project (Harker's Escape), and other projects.
     <br>
     <br>
-    A massive project that I've been put on as an architect owner recently has been a VR game. Details to be listed when it is closer to releasing, but the overall work done here includes scoping, approving PRs and reviewing code of 4 developers, setting up QA testing pipelines and build pipelines, writing code, and even pieces like marketing and game design.
+    The social media application is focused around allowing users to connect using a specialized grid post mechanism and globe feature, along with adding minigames to make the user experience better and more connected overall. This application's frontend and connection to backend was architected by me, which uses Unity to connect to the client's firebase backend. I decided that Photon would be the best way to create the simple multiplayer games that the client requested, and all of the Firebase calls were separated into 3 distinct managers to dictate which type of database was being used to get the Firebase calls. I also did high level scoping for 2 junior developers on this project in order to make sure that they have tasks to continue to work on the application, along with alleviating any risks that they run into, such as video player and video media, object pooling with infinite instantiation of grid posts, the multiplayer game, a unique globe asset, and other similar issues. I finished significant portions of the globe, multiplayer game, and building for android and iOS. Despite initial difficulties in meeting the estimated time requirements, the project was an overall success, leading to an extended contract between Robot Sea Monster Games and the client to continue to maintain the application, increasing the contracted number of hours that we could work on this project twice.
     <br>
     <br>
-    Notable client projects that I have worked on include a social media application, an LLM Escape Room project, and other projects. The social media application is focused around allowing users to connect using a specialized grid post mechanism and globe feature, along with adding minigames to make the user experience better and more connected overall. This application's frontend and connection to backend was architected by me, which uses Unity to connect to the client's firebase backend. I decided that Photon would be the best way to create the simple multiplayer games that the client requested, and all of the Firebase calls were separated into 3 distinct managers to dictate which type of database was being used to get the Firebase calls. I also did high level scoping for 2 junior developers on this project in order to make sure that they have tasks to continue to work on the application, along with alleviating any risks that they run into, such as video player and video media, object pooling with infinite instantiation of grid posts, the multiplayer game, a unique globe asset, and other similar issues. I finished significant portions of the globe, multiplayer game, and building for android and iOS. Despite initial difficulties in meeting the estimated time requirements, the project was an overall success, leading to an extended contract between Robot Sea Monster Games and the client to continue to maintain the application, increasing the contracted number of hours that we could work on this project twice.
-    <br>
-    <br>
-    The LLM Escape Room mechanics are done by me from the Unity side, which are designed in a way that allow a user to play the game using purely an LLM interaction dialogue. These mechanics include multiple crafting mechanics with attaching, detaching, moving around, picking up objects, throwing and dropping them, and more. Multiple UI integrations with the LLM, json inputs, and Unity's UI were also features that I worked on. I primarily was a supporting Unity developer on this project rather than the architecture owner.
+    The LLM Escape Room (Harker's Escape) mechanics are done by me from the Unity side, which are designed in a way that allow a user to play the game using purely an LLM interaction dialogue. These mechanics include multiple crafting mechanics with attaching, detaching, moving around, picking up objects, throwing and dropping them, and more. Multiple UI integrations with the LLM, json inputs, and Unity's UI were also features that I worked on. I primarily was a supporting Unity developer on this project rather than the architecture owner.
     <br>
     <br>
     <a class="btn btn-primary" href="https://robotseamonster.com" role="button">Robot Sea Monster Games</a>
@@ -251,6 +268,9 @@
     <br>
     <br>
     The other project revolved around generative adversarial networks. Hovenstar had an issue of static tile assets and tiles that required artist input in order to create. By using a generative adversarial network, the process of tile generation is much easier, as the machine learning model can simply do the work of the artist. I processed a ton of different Unity assets off the asset store, gathered all the tiles as a dataset for the GAN, and used openCV methods to transform the data and expand the amount of data that I had. I then trained the GAN on this dataset and generated a number of tiles for usage in any tile based game, with some fitting Hovenstar's design.
+    <br>
+    <br>
+    Very interestingly, the project has taken off by parts of the original team, now named as Paraside: Duality Unbound. It can be found here: <a href="https://store.steampowered.com/app/2881620/Paraside_Duality_Unbound/">Paraside: Duality Unbound</a>. I saw this game during Pax West, and it is definitely a different experience looking at a game showcase as someone who saw the game in a previous alpha build.
     <br>
     <br>
     <a class="btn btn-primary" href="https://drive.google.com/file/d/1jd7iSqrAV1cJekA_Jx4zRO5MtwIvj4Xc/view" role="button">Applied ML in Hovenstar Demo</a>
